@@ -4,13 +4,13 @@ import os
 
 # Configuration
 EMAIL_SENDER = 'nandapk68@gmail.com'
-EMAIL_PASSWORD = 'hqon hewi tssv ojzu'  # Use app password if 2FA is on
+EMAIL_PASSWORD = 'hqon hewi tssv ojzu'  
 CERTIFICATES_FOLDER = '/Users/mr.sairajnanda/Desktop/test/certficates'
 
 
-CSV_FILE = '/Users/mr.sairajnanda/Desktop/test/students.csv'  # CSV with Name,Email
+CSV_FILE = '/Users/mr.sairajnanda/Desktop/test/students.csv' 
 
-# Email subject and body
+
 EMAIL_SUBJECT = "Your Certificate of Achievement"
 EMAIL_BODY = """
 Dear {name},
@@ -23,13 +23,11 @@ Best regards,
 [Your Name or Organization]
 """
 
-# Set up the SMTP client
 yag = yagmail.SMTP(EMAIL_SENDER, EMAIL_PASSWORD)
 
-# Load student data
+
 students = pd.read_csv(CSV_FILE)
 
-# Loop through each student
 for _, row in students.iterrows():
     name = row['Names']
     email = row['Email']
