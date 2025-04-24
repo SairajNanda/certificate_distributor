@@ -52,8 +52,8 @@ if st.button("📤 Send Certificates"):
                         try:
                             yag.send(
                                 to=email,
-                                subject="Your Certificate of Achievement",
-                                contents=f"Dear {name},\n\nCongratulations on your achievement! 🎉\n\nPlease find your certificate attached.\n\nBest regards,\n[Your Organization]",
+                                subject="🎉 Your Clashothon Certificate is Here!",
+                                contents=f"Dear {name},\n\nThank you for being a part of Clashothon – your energy, creativity, and competitive spirit made it truly unforgettable! 🎉\n\nWe’re thrilled to share your Certificate of Participation (attached to this email) as a token of appreciation for your involvement.\n Keep the spirit alive, and we hope to see you in more exciting events ahead!\n\nIf you have any queries or feedback, feel free to reach out.\nBest regards,\nTeam ClashoThon \nTESSERACT X Rampage",
                                 attachments=filepath
                             )
                             sent_count += 1
@@ -62,7 +62,7 @@ if st.button("📤 Send Certificates"):
                     else:
                         failed.append((name, email, "Certificate not found"))
 
-                # Step 5: Summary
+                # Step 5: Summarycd
                 st.success(f"✅ Sent {sent_count} certificates successfully!")
                 if failed:
                     st.warning(f"⚠️ {len(failed)} failed:")
@@ -71,3 +71,13 @@ if st.button("📤 Send Certificates"):
 
         except Exception as e:
             st.error(f"❌ Unexpected error: {e}")
+# Thank you for being a part of Clashothon – your energy, creativity, and competitive spirit made it truly unforgettable!
+
+# We’re thrilled to share your Certificate of Participation (attached to this email) as a token of appreciation for your involvement.
+# Keep the spirit alive, and we hope to see you in more exciting events ahead!
+
+# If you have any queries or feedback, feel free to reach out.
+
+# Best regards,
+# Team ClashoThon
+# TESSERACT X Rampage
